@@ -1,10 +1,11 @@
 require 'deprec'
   
 set :application, "tomlambert.me"
-set :domain, "tomlambert.me"
+set :domain, "blizzard"
+set :user, "deploy"
 
-set :user, "ioptics"
-set :repository,  "git://github.com/#{user}/#{application}.git"
+set :scm_user, "ioptics"
+set :repository,  "git://github.com/ioptics/#{application}.git"
 
 # If you aren't using Subversion to manage your source code, specify
 # your SCM below:
