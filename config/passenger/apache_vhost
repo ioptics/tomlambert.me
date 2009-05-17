@@ -1,11 +1,8 @@
 # Don't cause the server to break if Passenger module not loaded
 <IfModule passenger_module>
 	<VirtualHost *:80>
-	  ServerName blizzard
-        ServerAlias blizzard
-        ServerAlias blizzard
-        ServerAlias blizzard
-        ServerAlias blizzard
+	  ServerName tomlambert.me
+	  ServerAlias www.tomlambert.me
 
 	  DocumentRoot "/opt/apps/tomlambert.me/current/public"
 	  RailsEnv production
