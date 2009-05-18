@@ -1,10 +1,17 @@
-# Filters added to this controller apply to all controllers in the application.
-# Likewise, all the methods added will be available for all controllers.
+require 'twitter'
 
 class ApplicationController < ActionController::Base
   helper :all # include all helpers, all the time
   protect_from_forgery # See ActionController::RequestForgeryProtection for details
 
   # Scrub sensitive parameters from your log
-  # filter_parameter_logging :password
+  filter_parameter_logging :password
+  
+  before_filter :find_lastest_tweets
+  
+  private
+  
+  def find_lastest_tweets
+    @latest_tweets = Twitter::Search.new.from('PICTOM').per_page(1)
+  end
 end

@@ -1,0 +1,126 @@
+html {
+  color: #000;
+  background: #FFF; }
+
+body, div, dl, dt, dd, ul, ol, li, h1, h2, h3, h4, h5, h6, pre, code, form, fieldset, legend, input, textarea, p, blockquote, th, td {
+  margin: 0;
+  padding: 0; }
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0; }
+
+fieldset, img {
+  border: 0; }
+
+address, caption, cite, code, dfn, em, strong, th, var {
+  font-style: normal;
+  font-weight: normal; }
+
+li {
+  list-style: none; }
+
+caption, th {
+  text-align: left; }
+
+h1, h2, h3, h4, h5, h6 {
+  font-size: 100%;
+  font-weight: normal; }
+
+q:before, q:after {
+  content: ''; }
+
+abbr, acronym {
+  border: 0;
+  font-variant: normal; }
+
+sup {
+  vertical-align: text-top; }
+
+sub {
+  vertical-align: text-bottom; }
+
+input, textarea, select {
+  font-family: inherit;
+  font-size: inherit;
+  font-weight: inherit; }
+
+input, textarea, select {
+  *font-size: 100%; }
+
+legend {
+  color: #000; }
+
+del, ins {
+  text-decoration: none; }
+
+body {
+  background: #FFFFFF;
+  font-family: Georgia, "Lucida Grande", "Lucida Sans Unicode", helvetica, verdana, arial, times, "Times New Roman", sans-serif; }
+
+#header {
+  width: 260px;
+  position: fixed;
+  top: 3%;
+  left: 0;
+  height: 94%;
+  padding: 0 20px;
+  border-right: 2px solid #C4C4C4; }
+  #header .menu {
+    margin-top: 50px; }
+    #header .menu li {
+      padding: 5px 0; }
+      #header .menu li a {
+        color: #2A2A2A;
+        text-decoration: none;
+        font-size: 1.2em; }
+        #header .menu li a:hover {
+          text-decoration: underline; }
+  #header h1.title {
+    font-size: 2.5em; }
+    #header h1.title a {
+      color: #000;
+      text-decoration: none; }
+  #header h2.strap {
+    font-size: 1.2em;
+    color: #898989;
+    font-style: italic;
+    margin-bottom: 10px; }
+  #header p {
+    font-size: 1em;
+    margin-bottom: 5px; }
+  #header p.telephone {
+    color: #B5B5B5; }
+  #header p.email a {
+    color: #5ACFF8; }
+  #header .twitter {
+    background: #DAECF8;
+    padding: 10px;
+    margin-top: 40px;
+    position: absolute;
+    width: 240px;
+    bottom: 0; }
+    #header .twitter h2 {
+      color: #82CCCE;
+      margin-bottom: 10px; }
+    #header .twitter p.tweet {
+      color: #185F74; }
+    #header .twitter p.meta {
+      color: #72B3B4;
+      font-size: .8em;
+      font-style: italic; }
+      #header .twitter p.meta a {
+        color: #72B3B4; }
+
+#content {
+  position: absolute;
+  top: 3%;
+  left: 300px;
+  height: 94%;
+  width: 600px;
+  padding: 0 20px; }
+  #content h1.soon {
+    text-align: center;
+    font-size: 4em;
+    color: #E7E7E7;
+    margin-top: 35%; }
