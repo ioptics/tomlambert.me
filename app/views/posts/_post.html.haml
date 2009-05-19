@@ -1,0 +1,8 @@
+%div[post]
+  %h2.title= h post.title
+  %div.body= h post.body
+  
+  %ul
+    %li= link_to 'Show', object_path(post)
+    %li= link_to 'Edit', edit_object_path(post)
+    %li= link_to 'Delete', object_path(post), :confirm => 'Really delete post?', :method => :delete

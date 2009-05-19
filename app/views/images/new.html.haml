@@ -1,0 +1,11 @@
+%h1 Upload Image
+
+= error_messages_for :image
+
+- form_for(:image, :url => objects_url, :html => { :multipart => true }) do |f|
+  = render :partial => "form", :locals => {:f => f}
+  %p.buttons= f.submit "Create"
+
+- if authorised?
+  %ul.admin_links
+    %li= link_to 'Back', objects_path

@@ -1,0 +1,11 @@
+%h1= h current_object.title
+
+%div[current_object]
+  .image= image_tag current_object.upload.url(:large)
+  .description= current_object.description
+
+- if authorised?
+  %ul.admin_links
+    %li= link_to 'Edit', edit_object_path
+    %li= link_to 'Delete', object_path, :confirm => 'Really delete image?', :method => :delete
+    %li= link_to 'Back', objects_path

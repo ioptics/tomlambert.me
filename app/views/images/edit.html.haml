@@ -1,0 +1,12 @@
+%h1 Edit Image
+
+= error_messages_for :image
+
+- form_for(:image, :url => object_url, :html => { :method => :put, :multipart => true }) do |f|
+  = render :partial => "form", :locals => {:f => f}
+  %p.buttons= f.submit "Update"
+
+- if authorised?
+  %ul.admin_links
+    %li= link_to 'Show', object_path
+    %li= link_to 'Back', objects_path

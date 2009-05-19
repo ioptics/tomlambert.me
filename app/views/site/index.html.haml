@@ -1,0 +1,18 @@
+%h1 Welcome to TOLA
+
+%p
+  Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo 
+  ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis 
+  dis parturient montes, nascetur ridiculus mus.
+
+%p
+  Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo 
+  ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis 
+  dis parturient montes, nascetur ridiculus mus.
+
+#recent
+  %h2 Recent Work
+  %ul
+    - @recent_work.each do |image|
+      %li= link_to(image_tag(image.upload.url(:thumb)), image_path(image))
+  

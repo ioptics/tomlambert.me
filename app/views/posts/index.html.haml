@@ -1,0 +1,7 @@
+%h1 Blog
+
+= render :partial => 'post', :collection => current_objects
+
+- if authorised?
+  %ul
+    %li= link_to 'Create News Post', new_object_path 

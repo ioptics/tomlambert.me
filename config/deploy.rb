@@ -3,6 +3,10 @@ require 'deprec'
 set :application, "tomlambert.me"
 set :domain, "blizzard"
 set :user, "deploy"
+set :app_user_prefix, ""
+set :app_user, user
+set :app_group_prefix, ""
+set :app_group, user
 
 set :scm_user, "ioptics"
 set :repository,  "git://github.com/ioptics/#{application}.git"
@@ -16,8 +20,8 @@ set :web_server_type,   :apache     # :apache, :nginx
 set :app_server_type,   :passenger  # :passenger, :mongrel
 set :db_server_type,    :mysql      # :mysql, :postgresql, :sqlite
 
-# set :packages_for_project, %w(libmagick9-dev imagemagick libfreeimage3) # list of packages to be installed
-# set :gems_for_project, %w(rmagick mini_magick image_science) # list of gems to be installed
+set :packages_for_project, %w(libmagick9-dev imagemagick libfreeimage3) # list of packages to be installed
+set :gems_for_project, %w(rmagick) # mini_magick image_science # list of gems to be installed
 
 # Update these if you're not running everything on one host.
 role :app, domain

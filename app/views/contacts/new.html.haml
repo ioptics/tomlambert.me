@@ -1,0 +1,15 @@
+%h1 Contact Me
+- form_for :message, :url => objects_path do |f|
+  = error_messages_for :contact
+
+  .field
+    = f.label :name
+    = f.text_field :name
+  .field
+    = f.label :email
+    = f.text_field :email
+  .field
+    = f.label :message
+    = f.text_area :message, :rows => 10
+  .buttons
+    =f.submit 'Send'
