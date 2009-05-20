@@ -12,7 +12,7 @@ class ApplicationController < ActionController::Base
   private
   
   def find_lastest_tweets
-    @latest_tweets = Twitter::Search.new.from('PICTOM').per_page(1) rescue nil
+    @latest_tweets = Twitter::Search.new.from('PICTOM').per_page(1)
   end
     
   

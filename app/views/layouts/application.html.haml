@@ -29,7 +29,7 @@
       - if @latest_tweets
         .twitter
           %h2 Latest Tweet
-          - @latest_tweets.each do |tweet|
+          - @latest_tweets.to_a.each do |tweet|
             %p.tweet= tweet.text
             %p.meta
               by
