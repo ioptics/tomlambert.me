@@ -10,7 +10,7 @@ class Image < ActiveRecord::Base
 
   validates_presence_of :title, :description
   
-  named_scope :recent, :order => 'created_at desc', :limit => 10
+  named_scope :recent, :order => 'created_at desc', :limit => 20
   
   def to_param
     permalink

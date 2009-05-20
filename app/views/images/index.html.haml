@@ -1,7 +1,7 @@
-%h1 Work
+%h1 
+  Work
+  - if authorised?
+    %em= link_to '(Add Work)', new_object_path
 
-= render :partial => 'image', :collection => current_objects
-
-- if authorised?
-  %ul
-    %li= link_to 'Add Work', new_object_path
+#image_slider
+  = render :partial => 'image', :collection => current_objects

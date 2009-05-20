@@ -17,14 +17,14 @@
         = mail_to 'hello@tomlambert.me', 'hello at tomlambert.me', :encode => :javascript
         
       %ul.menu
-        / %li.about<
-        /   = link_to 'About', about_path
+        %li.about<
+          = link_to 'About', about_path
         %li.work<
           = link_to 'Work', images_path
         %li.blog<
           = link_to 'Blog', posts_path
-        / %li.contact<
-        /   = link_to 'Contact', new_contact_path
+        %li.contact<
+          = link_to 'Contact', new_contact_path
           
       - if @latest_tweets
         .twitter

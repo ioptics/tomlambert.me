@@ -1,3 +1,4 @@
-%div[image]
+%div.image.image_medium
   %h3= link_to(image.title, object_path(image))
-  .image= link_to(image_tag(image.upload.url(:medium), :alt => image.title), object_path(image))
+  = link_to(image_tag(image.upload.url(:medium), :alt => image.title), object_path(image))
+  %p.description= truncate image.description, :length => 100

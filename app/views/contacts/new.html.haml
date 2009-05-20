@@ -1,4 +1,15 @@
 %h1 Contact Me
+
+%p
+  Please feel free to contact me with any commissions, collaborations or just to say hello!
+
+%ul
+  %li.email= mail_to 'hello@tomlambert.me', 'hello at tomlambert.me', :encode => :javascript
+  %li.email= mail_to 'tolaworks@googlemail.com', 'tolaworks at googlemail.com', :encode => :javascript
+  %li.telephone 07807 401066
+
+%h2 Send me a message
+
 - form_for :message, :url => objects_path do |f|
   = error_messages_for :contact
 
