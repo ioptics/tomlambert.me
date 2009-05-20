@@ -55,6 +55,7 @@ body { background: #FFFFFF; font: .8em Georgia, "Lucida Grande", "Lucida Sans Un
 #content { position: absolute; top: 3%; left: 300px; height: 94%; width: 700px; padding: 0 20px; }
 #content h1 { font-size: 2.2em; color: #434343; margin: 10px 0; }
 #content h2 { font-size: 1.8em; margin: 0 0 10px 0; }
+#content p { margin-bottom: 10px; color: #474747; }
 
 form .field { padding: 10px; border-bottom: 1px solid #CDCDCD; *display: inline-block; }
 form .field:after { content: " "; display: block; height: 0; clear: both; visibility: hidden; }

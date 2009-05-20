@@ -12,10 +12,11 @@ class ApplicationController < ActionController::Base
   private
   
   def find_lastest_tweets
-    @latest_tweets = Twitter::Search.new.from('PICTOM').per_page(1)
+    @latest_tweets = Twitter::Search.new.from('PICTOM').per_page(1) rescue nil
   end
+    
   
-  helper_method :authorised?
+  #helper_method :authorised?
   
   def authorised?
     authenticate_or_request_with_http_basic("Private Area") do |username, password|
