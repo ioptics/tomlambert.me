@@ -1,4 +1,6 @@
 class ImagesController < ApplicationController
+  before_filter :authorised?, :except => [:index, :show]
+  
   make_resourceful do
     actions :all
   end

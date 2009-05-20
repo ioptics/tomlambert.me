@@ -19,7 +19,7 @@ class ApplicationController < ActionController::Base
   
   def authorised?
     authenticate_or_request_with_http_basic("Private Area") do |username, password|
-      true if username == 'admin' and password == 'password'
+      username == 'admin' and password == 'password'
     end
   end
 end
