@@ -19,8 +19,11 @@ class ApplicationController < ActionController::Base
   #helper_method :authorised?
   
   def authorised?
-    authenticate_or_request_with_http_basic("Private Area") do |username, password|
+    authorised = authenticate_or_request_with_http_basic("Private Area") do |username, password|
       username == 'admin' and password == 'password'
     end
+    
+    session[:authorised] = authorised
+    
   end
 end
