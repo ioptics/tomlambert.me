@@ -1,9 +1,9 @@
 class ContactMailer < ActionMailer::Base
-  def new_message(email)
-    subject email.subject
-    recipients email.recipients
-    from email.from
+  def new_message(message)
+    subject message.subject
+    recipients message.recipients
+    from message.from
     sent_on Time.now
-    body :email => email
+    body :contact => contact
   end
 end
