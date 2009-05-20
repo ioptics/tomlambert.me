@@ -3,7 +3,7 @@
   %div.body= h post.body
   
 - if authorised?
-  %ul
+  %ul.admin_links
     %li= link_to 'Show', object_path(post)
     %li= link_to 'Edit', edit_object_path(post)
     %li= link_to 'Delete', object_path(post), :confirm => 'Really delete post?', :method => :delete

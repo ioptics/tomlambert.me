@@ -10,7 +10,8 @@
 
 %h2 Send me a message
 
-- form_for :message, :url => objects_path do |f|
+- form_for :contact, :url => objects_path do |f|
+  = show_flash
   = error_messages_for :contact
 
   .field

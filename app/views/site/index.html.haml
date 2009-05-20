@@ -1,5 +1,3 @@
-%h1 Welcome to TOLA
-
 #recent
   %h2 
     Recent Work
@@ -9,5 +7,5 @@
     - @recent_work.each do |image|
       %li
         = link_to(image_tag(image.upload.url(:thumb)), image_path(image))
-        %p= truncate image.title, :length => 50
+        %p= truncate image.title, :length => 15
   

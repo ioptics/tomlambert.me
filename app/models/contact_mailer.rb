@@ -4,6 +4,6 @@ class ContactMailer < ActionMailer::Base
     recipients message.recipients
     from message.from
     sent_on Time.now
-    body :contact => contact
+    body :contact => message
   end
 end

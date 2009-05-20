@@ -54,6 +54,10 @@ body { background: #FFFFFF; font: .8em Georgia, "Lucida Grande", "Lucida Sans Un
 #content { margin-left: 210px; padding: 0 20px; }
 #content ul { margin: 10px 0 20px 0; padding: 0 20px; }
 #content ul, #content li { list-style: circle inside; }
+#content .admin_links { *display: inline-block; margin-top: 10px; padding: 0; }
+#content .admin_links:after { content: " "; display: block; height: 0; clear: both; visibility: hidden; }
+#content .admin_links ul, #content .admin_links li { list-style: none; }
+#content .admin_links li { float: left; border-right: 1px solid #DFDFDF; padding: 5px; }
 
 a { color: #5ACFF8; }
 
@@ -78,22 +82,30 @@ form .buttons { padding: 10px 10px 10px 150px; }
 .errorExplanation ul { padding: 2px 10px; }
 .errorExplanation ul li { padding: 2px 0; color: #3F4043; }
 
-.admin_links { *display: inline-block; margin-top: 10px; }
-.admin_links:after { content: " "; display: block; height: 0; clear: both; visibility: hidden; }
-.admin_links li { float: left; border-right: 1px solid #DFDFDF; padding: 5px; }
-
 #recent { margin-top: 15px; padding-top: 15px; border-top: 1px solid #EAEAEA; }
 #recent ul { *display: inline-block; padding: 10px 0 0 10px; }
 #recent ul:after { content: " "; display: block; height: 0; clear: both; visibility: hidden; }
-#recent ul li { position: relative; overflow: hidden; height: 130px; float: left; margin: 0 10px 10px 0; }
-#recent ul li p { position: absolute; bottom: 0; margin: 0; background: #000; color: #D5D5D5; padding: 4px; }
+#recent ul li { position: relative; list-style: none; padding: 0; overflow: hidden; height: 130px; float: left; margin: 0 10px 10px 0; }
+#recent ul li a, #recent ul li a img { display: block; height: 130px; }
+#recent ul li p { position: absolute; bottom: 0; left: 0; margin: 0; background: #000; color: #D5D5D5; padding: 4px; opacity: 0.6; -moz-opacity: 0.6; }
 
 #image_slider { width: 100%; overflow: hidden; }
 #image_slider .image { float: left; margin: 20px; height: 400px; overflow: hidden; }
 
+.image { position: relative; }
 .image h3 { background: #F7F7F7; padding: 8px; font-size: 1.2em; }
 .image h3 a { color: #767676; text-decoration: none; }
 .image p.description { display: none; position: absolute; bottom: 0; background: #000; padding: 8px; margin: 0; color: #DFDFDF; }
 .image:hover p.description { display: block; }
 
-.image_medium { width: 300px; position: relative; }
+.image_medium { width: 300px; }
+
+.image_large { width: 600px; }
+.image_large p.description { display: block; top: 0; bottom: auto; right: -166px; width: 150px; background: #F0F0F0; color: #6D6D6D; font-size: .9em; }
+
+.flash { padding: 5px; }
+.flash p { color: #fff; font-weight: bold; margin: 0; }
+
+.flash_error { background: #CB0011; }
+
+.flash_success { background: #41BA11; }

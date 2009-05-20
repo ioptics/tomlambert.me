@@ -1,8 +1,8 @@
 %h1= h current_object.title
 
-%div[current_object]
-  .image= image_tag current_object.upload.url(:large)
-  .description= current_object.description
+%div.image.image_large
+  = image_tag current_object.upload.url(:large)
+  %p.description= current_object.description
 
 - if authorised?
   %ul.admin_links
