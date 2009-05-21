@@ -84,9 +84,9 @@ form .buttons { padding: 10px 10px 10px 150px; }
 #recent_work h2 { font-size: 1.5em; }
 #recent_work ul { *display: inline-block; margin: 0; padding: 0; }
 #recent_work ul:after { content: " "; display: block; height: 0; clear: both; visibility: hidden; }
-#recent_work ul li { position: relative; list-style: none; padding: 0; overflow: hidden; height: 130px; float: left; margin: 0 10px 10px 0; }
+#recent_work ul li { position: relative; list-style: none; padding: 0; overflow: hidden; height: 130px; float: left; margin: 0 10px 10px 0; border: 2px solid #E6E6E6; }
 #recent_work ul li a, #recent_work ul li a img { display: block; height: 130px; }
-#recent_work ul li p { position: absolute; bottom: 0; left: 0; margin: 0; background: #000; color: #D5D5D5; padding: 4px; opacity: 0.6; -moz-opacity: 0.6; }
+#recent_work ul li p { position: absolute; bottom: 0; left: 0; margin: 0; width: 100%; background: #fff; color: #424242; padding: 4px; opacity: 0.6; -moz-opacity: 0.6; }
 
 #recent_posts { width: 460px; float: left; }
 
