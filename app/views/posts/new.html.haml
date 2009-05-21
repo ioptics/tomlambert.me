@@ -4,7 +4,7 @@
 
 - form_for(:post, :url => objects_url) do |f|
   = render :partial => "form", :locals => {:f => f}
-  %p= f.submit "Create"
+  %p.buttons= f.submit "Create"
 
 %ul
   %li= link_to 'Back', objects_path

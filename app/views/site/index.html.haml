@@ -1,7 +1,17 @@
-#recent
+#recent_posts
+  %h1
+    TOLA
+    - if authorised?
+      %em= link_to '(Add Post)', new_post_path
+
+  = render :partial => 'posts/post', :collection => @recent_posts
+
+
+#recent_work
   %h2 
     Recent Work
     - if authorised?
+      %br
       %em= link_to '(Add Work)', new_image_path
   %ul
     - @recent_work.each do |image|

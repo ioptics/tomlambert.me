@@ -1,9 +1,11 @@
 %div[post]
-  %h2.title= h post.title
-  %div.body= h post.body
-  
-- if authorised?
-  %ul.admin_links
-    %li= link_to 'Show', object_path(post)
-    %li= link_to 'Edit', edit_object_path(post)
-    %li= link_to 'Delete', object_path(post), :confirm => 'Really delete post?', :method => :delete
+  %h2.title
+    = h post.title
+  %p.meta Posted by #{post.author} on #{post.created_at.strftime('%d/%m/%Y')}
+  %div.body= post.body
+  - if authorised?
+    %ul.admin_links
+      %li= link_to 'Show', post_path(post)
+      %li= link_to 'Edit', edit_post_path(post)
+      %li= link_to 'Delete', post_path(post), :confirm => 'Really delete post?', :method => :delete  
+

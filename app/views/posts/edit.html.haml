@@ -4,7 +4,7 @@
 
 - form_for(:post, :url => object_url, :html => { :method => :put }) do |f|
   = render :partial => "form", :locals => {:f => f}
-  %p= f.submit "Update"
+  %p.buttons= f.submit "Update"
 
 - if authorised?
   %ul.admin_links
