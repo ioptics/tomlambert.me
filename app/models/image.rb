@@ -3,7 +3,7 @@ class Image < ActiveRecord::Base
     :large => "600x",
     :medium => "300x", 
     :special => "500x600>",
-    :thumb => "100x"
+    :thumb => "115x150#"
   }
   
   has_permalink :title
