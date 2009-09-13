@@ -26,17 +26,6 @@
           = link_to 'Blog', posts_path
         %li.contact<
           = link_to 'Contact', new_contact_path
-          
-      - if @latest_tweets
-        .twitter
-          %h2 Latest Tweet
-          - @latest_tweets.to_a.each do |tweet|
-            %p.tweet= tweet.text
-            %p.meta
-              by
-              = link_to tweet.from_user, "http://www.twitter.com/#{tweet.from_user}"
-              at
-              = tweet.created_at.to_date.strftime("%d/%m/%Y at %I:%M%p").downcase
-    
+
     #content
       = yield
